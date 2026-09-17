@@ -1,0 +1,16 @@
+Q27 — Find vs Filter vs Some
+
+"Does at least one inactive user exist?"
+
+
+const users = [
+    { id: 101, name: "Naresh", active: true },
+    { id: 102, name: "Arun", active: false },
+    { id: 103, name: "Magesh", active: true }
+];
+
+"Does at least one inactive user exist?"
+
+ANSWER:
+I would use some() as it would return a boolean value for this question which would be more appropriate
+while, find and filter would return an object

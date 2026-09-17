@@ -1,0 +1,43 @@
+const responses = [
+    { endpoint: "/login", status: 200 },
+    { endpoint: "/users", status: 500 },
+    { endpoint: "/orders", status: 404 },
+    { endpoint: "/products", status: 200 }
+];
+
+const failed = responses
+    .filter(response => response.status >= 400)
+    .map(response => response.endpoint);
+
+console.log(failed);
+
+They expected:
+
+["/users", "/orders"]
+
+But they tell you the code is throwing an error.
+
+Your task
+
+Don't rewrite the code immediately.
+
+Tell me:
+
+Is there actually an error in the code shown?
+What will this code actually output?
+If someone says it's throwing an error, what would you investigate first?
+
+This is a QA interview debugging question, so I'm interested in your reasoning, not just the final code.
+
+
+
+REASONING:
+
+The code looks fine and there are no errors. 
+The output should look fine 
+because they have used .filter which would return a new Array 
+with endpoints that >=400. 
+So this would give 
+[ { endpoint: "/users", status: 500 }, { endpoint: "/orders", status: 404 } ] 
+followed by map - THis converts objects to array and 
+since it says response.endpoint, the final result would be ["/users", "/orders"]
