@@ -37,6 +37,23 @@
 | `toSorted()` | Non-mutating sort | ❌ No | New array | ❌ |
 | `toSpliced()` | Non-mutating splice | ❌ No | New array | ❌ |
 
+## Array Methods - Callback function parameters (Mandatory vs Optional)
+
+| Array Method | Mandatory (Conceptually) | Optional Parameters | Purpose |
+|---|---|---|---|
+| `map()` | `currentValue` | `index`, `array` | Creates a new array by transforming elements |
+| `filter()` | `currentValue` | `index`, `array` | Creates a new array based on a condition |
+| `reduce()` | `accumulator`, `currentValue` | `currentIndex`, `array` | Reduces array to a single value |
+| `forEach()` | `currentValue` | `index`, `array` | Executes a function for each element |
+| `find()` | `currentValue` | `index`, `array` | Returns the first matching element |
+| `findIndex()` | `currentValue` | `index`, `array` | Returns the index of the first match |
+| `some()` | `currentValue` | `index`, `array` | Checks if at least one element matches |
+| `every()` | `currentValue` | `index`, `array` | Checks if all elements match |
+| `findLast()` | `currentValue` | `index`, `array` | Returns the last matching element |
+| `findLastIndex()` | `currentValue` | `index`, `array` | Returns the index of the last match |
+| `sort()` | `a`, `b` (comparator) | None | Sorts elements using a comparison function |
+| `flatMap()` | `currentValue` | `index`, `array` | Maps and flattens one level |
+
 > `sort()` can take a comparison function, but it is not an iteration callback like `map()`, `filter()`, or `reduce()`.
 
 ## Static Array Methods
