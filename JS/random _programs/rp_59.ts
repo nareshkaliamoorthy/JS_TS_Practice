@@ -8,14 +8,14 @@ for (const num of non_dup_num) {
         dup_num.push(num);
     }
 }
-// const dup_ele: Record<number, number> = non_dup_num.reduce((acc, num) => {
-//     acc[num] = (acc[num] || 0) + 1;
-//     return acc;
-// }, {} as Record<number, number>);
-// console.log(dup_ele)
-// for (const key in dup_ele) {
-//     if (dup_ele[key] > 0) {
-//         dup_num.push(Number(key));
-//     }
-// }
+const dup_ele: Record<number, number> = non_dup_num.reduce((acc, num) => {
+    acc[num] = (acc[num] || 0) + 1;
+    return acc;
+}, {} as Record<number, number>);
+console.log(dup_ele)
+for (const key in dup_ele) {
+    if (dup_ele[key] > 0) {
+        dup_num.push(Number(key));
+    }
+}
 console.log(dup_num)
