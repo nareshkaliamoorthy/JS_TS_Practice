@@ -19,4 +19,6 @@ const charCount = str.reduce((char, value) => {
     return char;
 }, {} as Record<string, number>);
 console.log(charCount)
-//const sorted = Object.fromEntries(entries)
+const sorted = Object.fromEntries(Object.entries(charCount).sort((a, b) => b[0].localeCompare(a[0])));
+console.log(sorted);
+
